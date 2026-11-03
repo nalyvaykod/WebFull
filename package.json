@@ -4,15 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "sass": "sass --watch styles/style.scss:static/style.css",
+    "dev": "concurrently \"npm run sass\" nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^10.0.6",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
-    "multer": "^2.2.0"
+    "multer": "^2.2.0",
+    "sass": "^1.107.1"
   }
 }
